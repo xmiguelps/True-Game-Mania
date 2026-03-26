@@ -1,0 +1,32 @@
+@Api_HostAddress = http://localhost:5253
+
+GET {{Api_HostAddress}}/api/Users
+###
+
+GET {{Api_HostAddress}}/Users/1006
+###
+
+GET {{Api_HostAddress}}/api/Users?email=gibertoni.passos@gmail.c
+###
+
+POST {{Api_HostAddress}}/api/Users
+Content-Type: application/json
+
+{
+    "FirstName": "dan",
+    "LastName": "dragao",
+    "CPF": "111",
+    "Senha": "222",
+    "Email": "Pato.games@gmail.com",
+    "IsAdmin": true    
+}
+###
+
+PUT {{Api_HostAddress}}/Users/1006
+Content-Type: application/json
+
+{
+    "Email": "daniel@gmail.com"
+}
+###
+DELETE {{Api_HostAddress}}/api/Users/1017

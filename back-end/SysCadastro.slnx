@@ -1,0 +1,8 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/SysCadastro.Api/SysCadastro.Api.csproj" />
+    <Project Path="src/SysCadastro.Application/SysCadastro.Application.csproj" />
+    <Project Path="src/SysCadastro.Domain/SysCadastro.Domain.csproj" />
+    <Project Path="src/SysCadastro.Infrastructure/SysCadastro.Infrastructure.csproj" />
+  </Folder>
+</Solution>
