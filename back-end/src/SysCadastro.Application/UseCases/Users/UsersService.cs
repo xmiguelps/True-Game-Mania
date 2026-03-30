@@ -23,7 +23,7 @@ public class UsersService : IUserService
         {
             users = await _repository.GetAdminsAsync();
         }
-        return users.Select(u => new UserReadDto(u.Id, u.FirstName, u.Email));
+        return users.Select(u => new UserReadDto(u.Id, u.FirstName, u.LastName, u.Cpf, u.Email, u.Senha, u.IsAdmin));
     }
 
     public async Task<UserReadDto?> GetById(int id)
@@ -32,7 +32,7 @@ public class UsersService : IUserService
         
         if (user is null) return null;
 
-        return new UserReadDto(user.Id, user.FirstName, user.Email);
+        return new UserReadDto(user.Id, user.FirstName, user.LastName, user.Cpf, user.Email, user.Senha, user.IsAdmin);
     }
 
     public async Task<UserReadDto> GetByEmail(string email)
@@ -41,7 +41,7 @@ public class UsersService : IUserService
         
         if (user is null) return null;
 
-        return new UserReadDto(user.Id, user.FirstName, user.Email);
+        return new UserReadDto(user.Id, user.FirstName, user.LastName, user.Cpf, user.Email, user.Senha, user.IsAdmin);
     }
 
     public async Task<bool> CreateAsync(UserCreateDto dto)

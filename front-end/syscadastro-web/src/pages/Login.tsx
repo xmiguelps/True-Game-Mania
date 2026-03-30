@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom"
+import { Link, useNavigate } from "react-router-dom"
 import { useEffect } from "react";
 
 type LoginProps = {
@@ -21,10 +21,13 @@ function Login( { setUsername } : LoginProps ) {
         });
     }, []);
 
+    const navigate = useNavigate();
+
     const salvarNome = async (e:any) => {
         e.preventDefault();
 
         const Email = (document.querySelector('#email') as HTMLInputElement).value;
+        const Senha = (document.querySelector('#senha') as HTMLInputElement).value;
 
         try {
             const response = await fetch(
@@ -39,9 +42,14 @@ function Login( { setUsername } : LoginProps ) {
 
             const data = await response.json();
             if (!response.ok) {
-                alert("Usuario ou senha incorreta")
+                alert("Email não existente");
             }
-            setUsername(data.firstName);
+            if (Senha == data.senha) {
+                setUsername(data.firstName);
+                navigate('/')
+            } else {
+                alert("Senha incorreta");
+            }
         } catch (error) {
             console.error("Erro ao buscar usuario: ", error)
         }

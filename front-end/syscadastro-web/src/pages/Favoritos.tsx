@@ -14,9 +14,10 @@ type FavoritosProps = {
     setCartItems: React.Dispatch<React.SetStateAction<any[]>>;
     NotifCart: boolean;
     showNotif_cart: () => void;
+    username: string;
 }
 
-function Favoritos({count, favoriteItems, setFavoriteItems, setCount, cartItems, setCartItems, NotifCart, showNotif_cart} : FavoritosProps) {
+function Favoritos({count, favoriteItems, setFavoriteItems, setCount, cartItems, setCartItems, NotifCart, showNotif_cart, username} : FavoritosProps) {
 
     type NotifProps = {
         visible: boolean;
@@ -34,7 +35,7 @@ function Favoritos({count, favoriteItems, setFavoriteItems, setCount, cartItems,
     return (
         <main>
             <Notif_msg_cart visible={NotifCart} />
-            <Header count={count}/>
+            <Header username={username} count={count}/>
             <div className="d-flex flex-column">
                 <h2 className="title-galerias">
                     <img src="assets/imgs/icons/heart.png" alt="icone de novidades"/><p className="p-0 m-0 m-2 d-inline">Favorites</p><img src="assets/imgs/icons/seta-direita.png" alt="seta para direita"/>

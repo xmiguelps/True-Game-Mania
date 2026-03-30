@@ -61,7 +61,8 @@ function App() {
               </Route>
 
               <Route path="/favoritos" element={
-                <Favoritos 
+                <Favoritos
+                username={UserName}
                 count={count} 
                 favoriteItems={favoriteItems} 
                 setFavoriteItems={setFavoriteItems}

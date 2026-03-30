@@ -4,4 +4,4 @@ public record UserCreateDto(string FirstName, string LastName, string Cpf, strin
 
 public record UserUpdateDto(string? FirstName, string? Email, bool? IsAdmin);
 
-public record UserReadDto(int id, string FirstName, string Email);
+public record UserReadDto(int id, string FirstName, string LastName, string Cpf , string Email, string Senha, bool IsAdmin);
