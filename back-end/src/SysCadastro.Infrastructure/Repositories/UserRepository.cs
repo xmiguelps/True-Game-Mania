@@ -1,5 +1,6 @@
 using System.Globalization;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.VisualBasic;
 using sys_cadastro.Adpters.AppDb;
 using sys_cadastro.Entities.Users;
 using sys_cadastro.UseCases.Users.Repository;
@@ -21,12 +22,10 @@ public class UserRepository : IUserRepository
             .ToListAsync(cancellationToken);
     }
 
-    public async Task<IEnumerable<User>> GetAccountAsync(string? email, CancellationToken cancellationToken = default)
+    public async Task<User> GetAccountAsync(string email, CancellationToken cancellationToken = default)
     {
         return await _db.Users
-            .AsNoTracking()
-            .Where(u => u.Email == email)
-            .ToListAsync();
+            .FirstOrDefaultAsync(u => u.Email == email, cancellationToken);
     }
 
     public async Task<IEnumerable<User>> GetAdminsAsync(CancellationToken cancellationToken = default)

@@ -38,7 +38,10 @@ function Login( { setUsername } : LoginProps ) {
             );
 
             const data = await response.json();
-            setUsername(data);
+            if (!response.ok) {
+                alert("Usuario ou senha incorreta")
+            }
+            setUsername(data.firstName);
         } catch (error) {
             console.error("Erro ao buscar usuario: ", error)
         }

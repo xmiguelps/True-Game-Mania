@@ -27,7 +27,7 @@ function Header({ count, username } : HeaderProps) {
                                             <div className="login-button d-flex nav-link active" aria-current="page">
                                                 {username 
                                                 ? 
-                                                <p> - {username}</p> 
+                                                <p className="login-text" >{username}</p> 
                                                 : 
                                                 <>
                                                 <Link to="/login">

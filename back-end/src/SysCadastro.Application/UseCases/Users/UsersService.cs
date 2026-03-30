@@ -16,15 +16,12 @@ public class UsersService : IUserService
         _repository = repository;
     }
 
-    public async Task<IEnumerable<UserReadDto>> GetAllAsync(string? search, string? email)
+    public async Task<IEnumerable<UserReadDto>> GetAllAsync(string? search)
     {
         var users = await _repository.GetAllAsync();
         if (search == "admin")
         {
             users = await _repository.GetAdminsAsync();
-        } else if (email != null)
-        {
-            users = await _repository.GetAccountAsync(email);
         }
         return users.Select(u => new UserReadDto(u.Id, u.FirstName, u.Email));
     }
@@ -38,25 +35,33 @@ public class UsersService : IUserService
         return new UserReadDto(user.Id, user.FirstName, user.Email);
     }
 
+    public async Task<UserReadDto> GetByEmail(string email)
+    {
+        var user = await _repository.GetAccountAsync(email);
+        
+        if (user is null) return null;
+
+        return new UserReadDto(user.Id, user.FirstName, user.Email);
+    }
+
     public async Task<bool> CreateAsync(UserCreateDto dto)
     {
+        var verif = await _repository.GetAccountAsync(dto.Email);
+
         if (dto.Email == null || dto.FirstName == null || dto.LastName == null || dto.Cpf == null || dto.Senha == null)
         {
             return false;   
-        }
-
-        var verif = _repository.GetAccountAsync(dto.Email);
-
-        if (verif != null)
+        } else if (verif != null)
         {
             return false;
+        } else
+        {
+            var user = new User(dto.FirstName, dto.LastName, dto.Cpf, dto.Email, dto.Senha, dto.IsAdmin.Value);
+
+            await _repository.AddAsync(user);
+
+            return true;
         }
-
-        var user = new User(dto.FirstName, dto.LastName, dto.Cpf, dto.Email, dto.Senha, dto.IsAdmin.Value);
-
-        await _repository.AddAsync(user);
-
-        return true;
     }
 
     public async Task<bool> UpdateAsync(int id, UserUpdateDto dto, bool validacao)

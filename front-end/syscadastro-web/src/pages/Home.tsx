@@ -6,6 +6,7 @@ import produtos from "../contexts/produtos";
 import { useEffect, type Dispatch } from "react";
 import { createPortal } from "react-dom";
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 type NotifProps = {
         visible: boolean;
@@ -68,7 +69,13 @@ function Home({count, setCount, cartItems, setCartItems, favoriteItems, setFavor
         }, 3000);
     }
 
+    const navigate = useNavigate();
+
     useEffect(() => {
+
+        if (!username) {
+            navigate("/login");
+        }
 
         const searchButton = document.querySelector('.search-button');
         const searchinput = document.querySelector('.search');

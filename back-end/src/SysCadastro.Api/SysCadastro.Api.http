@@ -6,7 +6,7 @@ GET {{Api_HostAddress}}/api/Users
 GET {{Api_HostAddress}}/Users/1006
 ###
 
-GET {{Api_HostAddress}}/api/Users?email=gibertoni.passos@gmail.c
+GET {{Api_HostAddress}}/api/Users?email=gibertoni.passos@gmail.com
 ###
 
 POST {{Api_HostAddress}}/api/Users
@@ -29,4 +29,4 @@ Content-Type: application/json
     "Email": "daniel@gmail.com"
 }
 ###
-DELETE {{Api_HostAddress}}/api/Users/1017
+DELETE {{Api_HostAddress}}/api/Users/1018

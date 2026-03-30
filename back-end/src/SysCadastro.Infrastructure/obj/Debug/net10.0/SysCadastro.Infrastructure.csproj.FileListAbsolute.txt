@@ -17,3 +17,4 @@ C:\Users\Miguel Alves\Documents\Estudos - Miguel Passos\back-end\Clean Archtetur
 C:\Users\Miguel Alves\Documents\Estudos - Miguel Passos\back-end\Clean Archteture\src\back-end\src\SysCadastro.Infrastructure\obj\Debug\net10.0\SysCadastro.Infrastructure.pdb
 C:\Users\Miguel Alves\Documents\Estudos - Miguel Passos\back-end\Clean Archteture\src\back-end\src\SysCadastro.Infrastructure\obj\Debug\net10.0\SysCadastro.Infrastructure.genruntimeconfig.cache
 C:\Users\Miguel Alves\Documents\Estudos - Miguel Passos\back-end\Clean Archteture\src\back-end\src\SysCadastro.Infrastructure\obj\Debug\net10.0\ref\SysCadastro.Infrastructure.dll
+C:\Users\Miguel Alves\Documents\Estudos - Miguel Passos\back-end\Clean Archteture\src\back-end\src\SysCadastro.Infrastructure\obj\Debug\net10.0\SysCadastro.Infrastructure.sourcelink.json

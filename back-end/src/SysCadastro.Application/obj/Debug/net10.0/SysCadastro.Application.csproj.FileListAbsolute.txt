@@ -28,3 +28,4 @@ C:\Users\Miguel Alves\Documents\Estudos - Miguel Passos\back-end\Clean Archtetur
 C:\Users\Miguel Alves\Documents\Estudos - Miguel Passos\back-end\Clean Archteture\src\back-end\src\SysCadastro.Application\obj\Debug\net10.0\refint\SysCadastro.Application.dll
 C:\Users\Miguel Alves\Documents\Estudos - Miguel Passos\back-end\Clean Archteture\src\back-end\src\SysCadastro.Application\obj\Debug\net10.0\SysCadastro.Application.pdb
 C:\Users\Miguel Alves\Documents\Estudos - Miguel Passos\back-end\Clean Archteture\src\back-end\src\SysCadastro.Application\obj\Debug\net10.0\ref\SysCadastro.Application.dll
+C:\Users\Miguel Alves\Documents\Estudos - Miguel Passos\back-end\Clean Archteture\src\back-end\src\SysCadastro.Application\obj\Debug\net10.0\SysCadastro.Application.sourcelink.json

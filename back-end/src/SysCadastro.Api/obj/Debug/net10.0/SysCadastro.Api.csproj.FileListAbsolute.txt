@@ -242,3 +242,4 @@ C:\Users\Miguel Alves\Documents\Estudos - Miguel Passos\back-end\Clean Archtetur
 C:\Users\Miguel Alves\Documents\Estudos - Miguel Passos\back-end\Clean Archteture\src\back-end\src\SysCadastro.Api\bin\Debug\net10.0\tr\Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll
 C:\Users\Miguel Alves\Documents\Estudos - Miguel Passos\back-end\Clean Archteture\src\back-end\src\SysCadastro.Api\bin\Debug\net10.0\zh-Hans\Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll
 C:\Users\Miguel Alves\Documents\Estudos - Miguel Passos\back-end\Clean Archteture\src\back-end\src\SysCadastro.Api\bin\Debug\net10.0\zh-Hant\Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll
+C:\Users\Miguel Alves\Documents\Estudos - Miguel Passos\back-end\Clean Archteture\src\back-end\src\SysCadastro.Api\obj\Debug\net10.0\SysCadastro.Api.sourcelink.json

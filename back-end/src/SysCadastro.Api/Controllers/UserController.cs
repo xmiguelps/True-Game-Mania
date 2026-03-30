@@ -16,7 +16,12 @@ public class UsersController : ControllerBase
     [HttpGet]
     public async Task<IActionResult> GetAll([FromQuery] string? search, string? email)
     {
-        var users = await _userService.GetAllAsync(search, email);
+        var users = await _userService.GetAllAsync(search);
+        if (email != null)
+        {
+            var userByEmail = await _userService.GetByEmail(email);
+            return Ok(userByEmail);
+        }
         return Ok(users);
     }
 
@@ -32,7 +37,7 @@ public class UsersController : ControllerBase
     public async Task<IActionResult> Create([FromBody] UserCreateDto dto)
     {
         bool validacao = await _userService.CreateAsync(dto);
-        if (validacao == false) return BadRequest();
+        if (validacao != true) return BadRequest();
         return Ok(); 
     }
 
